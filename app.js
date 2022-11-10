@@ -6,7 +6,8 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 const {authRouter, boardRouter, columnsRouter, taskRouter} = require("./src/routes");
-const {ENV} = require("./src/common/env.enum");
+const ENV = require("./src/common/env.enum");
+
 
 mongoose
 	.connect('mongodb+srv://OlehBabiak:NdMCuYEdQLmMRpWc@cluster0.rg1g0ph.mongodb.net/task-manager', {

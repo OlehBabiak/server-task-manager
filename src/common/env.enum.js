@@ -1,4 +1,4 @@
-import { config } from 'dotenv';
+const { config } = require ('dotenv');
 
 config();
 
@@ -11,5 +11,4 @@ const ENV = {
 		PORT: APP_PORT,
 	},
 };
-
-export {ENV}
+module.exports = ENV
