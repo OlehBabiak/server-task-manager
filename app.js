@@ -25,7 +25,7 @@ mongoose
 	});
 
 const corsOptions ={
-	origin: 'https://tranquil-salmiakki-cd41a8.netlify.app',
+	origin: 'https://olehbabiak.github.io/task-control-app/',
 	credentials:true,            //access-control-allow-credentials:true
 	optionSuccessStatus:200
 }
