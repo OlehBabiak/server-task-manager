@@ -21,7 +21,7 @@ mongoose
 	});
 
 const corsOptions ={
-	origin:'http://localhost:4200',
+	origin: ENV.APP.URL,
 	credentials:true,            //access-control-allow-credentials:true
 	optionSuccessStatus:200
 }
