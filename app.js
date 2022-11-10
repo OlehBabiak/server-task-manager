@@ -8,9 +8,8 @@ const path = require("path");
 const {authRouter, boardRouter, columnsRouter, taskRouter} = require("./src/routes");
 const ENV = require("./src/common/env.enum");
 
-
 mongoose
-	.connect('mongodb+srv://OlehBabiak:NdMCuYEdQLmMRpWc@cluster0.rg1g0ph.mongodb.net/task-manager', {
+	.connect(ENV.APP.URL, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})
@@ -35,8 +34,8 @@ const start = async () => {
 		if (!fs.existsSync('src')) {
 			await fs.mkdirSync('src');
 		}
-		app.listen(ENV.APP.PORT | 3000, () => {
-			console.log('App listen 8080 ');
+		app.listen(ENV.APP.PORT, () => {
+			console.log('App listen 8080');
 		});
 	} catch (err) {
 		console.error(`Error on server startup: ${ err.message }`);

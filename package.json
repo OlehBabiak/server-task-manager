@@ -4,7 +4,7 @@
   "description": "server for task-manager",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "lint": "eslint . --ext .js --fix"
   },
   "author": "Oleh Babiak",
@@ -23,5 +23,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.5",
     "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": "16.15.1"
   }
 }
