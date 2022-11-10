@@ -4,7 +4,7 @@
   "description": "server for task-manager",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "lint": "eslint . --ext .js --fix"
   },
   "author": "Oleh Babiak",
