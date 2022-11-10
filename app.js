@@ -2,7 +2,7 @@ const fs = require('fs');
 const express = require('express');
 const morgan = require('morgan')
 const app = express();
-const cors = require("cors");
+// const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 const {authRouter, boardRouter, columnsRouter, taskRouter} = require("./src/routes");
@@ -20,11 +20,11 @@ mongoose
 		console.log("no connection ");
 	});
 
-const corsOptions ={
-	origin: ENV.APP.URL,
-	credentials:true,            //access-control-allow-credentials:true
-	optionSuccessStatus:200
-}
+// const corsOptions ={
+// 	origin: ENV.APP.URL,
+// 	credentials:true,            //access-control-allow-credentials:true
+// 	optionSuccessStatus:200
+// }
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(morgan('tiny'));
