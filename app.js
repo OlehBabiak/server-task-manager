@@ -33,7 +33,7 @@ const start = async () => {
 		if (!fs.existsSync('src')) {
 			await fs.mkdirSync('src');
 		}
-		app.listen(8080, () => {
+		app.listen(8080 | 3000, () => {
 			console.log('App listen 8080');
 		});
 	} catch (err) {
