@@ -25,7 +25,7 @@ mongoose
 	});
 
 const corsOptions ={
-	origin: 'https://olehbabiak.github.io/task-control-app/',
+	origin: 'https://olehbabiak.github.io',
 	credentials:true,            //access-control-allow-credentials:true
 	optionSuccessStatus:200
 }
