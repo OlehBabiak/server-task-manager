@@ -34,7 +34,7 @@ const start = async () => {
 		if (!fs.existsSync('src')) {
 			await fs.mkdirSync('src');
 		}
-		app.listen(ENV.APP.PORT, () => {
+		app.listen(8080, () => {
 			console.log('App listen 8080');
 		});
 	} catch (err) {
