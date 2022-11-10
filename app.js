@@ -25,7 +25,7 @@ mongoose
 	});
 
 const corsOptions ={
-	origin: ENV.APP.URL,
+	origin: 'https://tranquil-salmiakki-cd41a8.netlify.app',
 	credentials:true,            //access-control-allow-credentials:true
 	optionSuccessStatus:200
 }
