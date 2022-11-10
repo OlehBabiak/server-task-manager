@@ -6,6 +6,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 const {authRouter, boardRouter, columnsRouter, taskRouter} = require("./src/routes");
+const {ENV} = require("./src/common/env.enum");
 
 mongoose
 	.connect('mongodb+srv://OlehBabiak:NdMCuYEdQLmMRpWc@cluster0.rg1g0ph.mongodb.net/task-manager', {
@@ -33,7 +34,7 @@ const start = async () => {
 		if (!fs.existsSync('src')) {
 			await fs.mkdirSync('src');
 		}
-		app.listen(3002 | 3000, () => {
+		app.listen(ENV.APP.PORT | 3000, () => {
 			console.log('App listen 8080 ');
 		});
 	} catch (err) {
