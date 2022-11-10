@@ -7,9 +7,13 @@ const mongoose = require("mongoose");
 const path = require("path");
 const {authRouter, boardRouter, columnsRouter, taskRouter} = require("./src/routes");
 const ENV = require("./src/common/env.enum");
+const { config } = require ('dotenv');
+
+config();
+
 
 mongoose
-	.connect(ENV.APP.URL, {
+	.connect(process.env.MONGO_URL, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})
@@ -39,7 +43,7 @@ const start = async () => {
 		if (!fs.existsSync('src')) {
 			await fs.mkdirSync('src');
 		}
-		app.listen(ENV.APP.PORT | 3000, () => {
+		app.listen(process.env.PORT || 5000, () => {
 			console.log('App listen 8080');
 		});
 	} catch (err) {
