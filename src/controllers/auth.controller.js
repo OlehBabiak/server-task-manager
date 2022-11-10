@@ -24,11 +24,6 @@ module.exports = {
 	},
 	login: async (req, res, next) => {
 		try {
-			if ('OPTIONS' === req.method) {
-				return res.sendStatus(200);
-			} else {
-				next();
-			}
 			const user = await UserDB
 				.findOne({ email: req.body.email.toLowerCase() });
 			const hasher = user ? await passwordHasher.compare(req.body.password, user.password) : false;
