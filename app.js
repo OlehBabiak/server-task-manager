@@ -25,7 +25,9 @@ mongoose
 	});
 
 const corsOptions ={
-	origin: 'https://olehbabiak.github.io',
+	// origin: 'https://olehbabiak.github.io',
+	// origin: 'http://localhost:4200',
+	// origin: 'http://localhost:60922',
 	credentials:true,            //access-control-allow-credentials:true
 	optionSuccessStatus:200
 }
@@ -44,7 +46,7 @@ const start = async () => {
 			await fs.mkdirSync('src');
 		}
 		app.listen(process.env.PORT || 5000, () => {
-			console.log('App listen 8080');
+			console.log('App listen 8060');
 		});
 	} catch (err) {
 		console.error(`Error on server startup: ${ err.message }`);

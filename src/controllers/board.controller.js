@@ -83,7 +83,7 @@ module.exports = {
 			const {id} = req.params
 			const deletedBoard = await BoardDB.findByIdAndDelete(id);
 			await ColumnDB.deleteMany({boardID: id});
-			await TaskDB.deleteMany({boardID: id})
+			await TaskDB.deleteMany({boardID: id, status: {$ne: "archive"}})
 			if (deletedBoard) {
 				const boards = await BoardDB.find(
 					{userID: req.user.userId}
