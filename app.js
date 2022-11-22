@@ -25,7 +25,7 @@ mongoose
 	});
 
 const corsOptions ={
-	// origin: 'https://olehbabiak.github.io',
+	origin: 'https://olehbabiak.github.io',
 	// origin: 'http://localhost:4200',
 	// origin: 'http://localhost:60922',
 	credentials:true,            //access-control-allow-credentials:true
